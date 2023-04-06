@@ -13,13 +13,10 @@ app = Flask(__name__)
 def homePage():
     return 'Home page'
 
+# Volunteer
 @app.route('/volunteerLogin')
 def volunteerLogin():
     return 'Volunteer login'
-
-@app.route('/schoolLogin')
-def schoolLogin():
-    return 'School login'
 
 @app.route('/user/<username>')
 def volunteerPage(username):
@@ -36,3 +33,17 @@ def volunteerRewards(username):
 @app.route('/user/<username>/vacancySearch')
 def volunteerVacancySearch(username):
     return f'Volunteer vacancy search: {escape(username)}'
+
+# School
+
+@app.route('/schoolLogin')
+def schoolLogin():
+    return 'School login'
+
+@app.route('/school/<school>')
+def vacancyListing(school):
+    return f'Vacancy listing: {escape(school)}'
+
+@app.route('/school/<school>/applications')
+def applicationListing(school):
+    return f'Application listing: {escape(school)}'
