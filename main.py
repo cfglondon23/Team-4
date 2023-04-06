@@ -88,9 +88,9 @@ def volunteerVacancySearch(username):
 def schoolLogin():
     return render_template('login.html')
 
-@app.route('/register')
+@app.route('/schoolRegister')
 def schoolRegister():
-    return render_template('register.html')
+    return render_template('signupschools.html')
 
 @app.route('/school/<school>')
 def vacancyListing(school):
