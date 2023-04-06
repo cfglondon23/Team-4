@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+		<link href="./css/dialog.css" rel="stylesheet" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="v1_14">
+			<div class="v1_15"></div>
+			<div class="v1_19"></div>
+			<input id="name" class="v1_22"></div>
+			<span id="login" class="v1_20">login</span>
+			<span class="v1_21">Name</span>
+			<input id="password" class="v1_32"></div>
+			<span class="v1_33">Password</span>
+			<span class="v2_408">EquiTeach</span>
+		</div>
+	</body>
+	<script>
+		$("#login").click(function(){
+    	$.getJSON("http://127.0.0.1:8080",
+        //发送给后端的数据
+        {
+            "name":$("#name").val(),
+            "password":$("#password").val()
+        },
+        //回调函数
+        function(data){
+            var json=data[0];
+            if(json.success == 0){
+                alert("登录失败")
+            }
+            else if(json.success== 1){
+                window.location.href="home2.html";
+            }
+        }
+    )
+})
+	</script>
+</html>
