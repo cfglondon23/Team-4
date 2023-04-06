@@ -67,6 +67,14 @@ def registerAction():
 def volunteerPage(username):
     return render_template("profiledash.html", data=[f"/user/{username}/vacancySearch", f"/user/{username}/rewards"])
 
+@app.route('/editDetailsAction', methods =["GET", "POST"])
+def editDetailsAction():
+    return redirect("/editDetails")
+
+@app.route('/editDetails')
+def editDetails():
+    return render_template("editdetails.html")
+
 @app.route('/user/<username>/rewards')
 def volunteerRewards(username):
     return render_template("rewards.html")
