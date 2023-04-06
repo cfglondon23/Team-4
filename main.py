@@ -7,6 +7,7 @@
 from flask import Flask, render_template, request
 from markupsafe import escape
 import database as db
+import pdb
 
 app = Flask(__name__)
 
@@ -19,7 +20,7 @@ def homePage():
 def volunteerLogin():
     return render_template('login.html')
 
-@app.route('/', methods =["GET", "POST"])
+@app.route('/loginAction', methods =["GET", "POST"])
 def loginAction():
     if request.method == "POST":
         username = request.form.get("username")
@@ -38,6 +39,20 @@ def loginAction():
 @app.route('/register')
 def volunteerRegister():
     return render_template('register.html')
+
+@app.route('/registerAction', methods =["GET", "POST"])
+def registerAction():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        age = request.form.get("age")
+        # check if username exists in db already
+        if db.userExists(username):
+            return "username already exists"
+        else:
+            db.storeUserProfile(username, password, age)
+            return volunteerPage(username)
+    return render_template("register.html")
 
 @app.route('/user/<username>')
 def volunteerPage(username):

@@ -7,7 +7,7 @@ cred_obj = firebase_admin.credentials.Certificate(KEY_PATH)
 default_app = firebase_admin.initialize_app(cred_obj, {'databaseURL': DB_URL})
 
 # takes parameters, stores it to the database, returns user id
-def createUserProfile(username, password, age):
+def storeUserProfile(username, password, age):
     info = {"password": password, "age": age}
     ref = db.reference("/")
     ref.child("users").child(username).set(info)
@@ -18,8 +18,12 @@ def getUserProfile(username):
     ref = db.reference("/")
     return ref.child("users").child(username).get()
 
+def userExists(username):
+    ref = db.reference("/")
+    return ref.child("users").child(username).get() != None
+
 if __name__ == "__main__":
-    k1 = createUserProfile("bobsmith", "", 30)
-    k2 = createUserProfile("lilycarter", "", 22)
-    k3 = createUserProfile("jaycarter", "", 39)
+    k1 = storeUserProfile("bobsmith", "", 30)
+    k2 = storeUserProfile("lilycarter", "", 22)
+    k3 = storeUserProfile("jaycarter", "", 39)
     print(getUserProfile(k3))

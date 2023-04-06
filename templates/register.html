@@ -3,22 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 </head>
 
 <body>
     <h1>Register Page</h1>
 
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
-        {{ form.submit }}
-    </form>
-
-    <a href="{{ url_for('login') }}">Already have an account? Log In</a>
+    <form action="{{ url_for('registerAction')}}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="username">
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password" placeholder="password">
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" placeholder="age">
+    <button type="submit">Register</button>
 </body>
 
 </html>
