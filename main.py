@@ -6,7 +6,7 @@
 
 from flask import Flask, render_template, request
 from markupsafe import escape
-import database
+import database as db
 
 app = Flask(__name__)
 
@@ -20,10 +20,19 @@ def volunteerLogin():
     return render_template('login.html')
 
 @app.route('/', methods =["GET", "POST"])
-def getUsername():
+def loginAction():
     if request.method == "POST":
-       username = request.form.get("username")
-       return volunteerPage(username)
+        username = request.form.get("username")
+        password = request.form.get("password")
+        userInfo = db.getUserProfile(username)
+        if userInfo == None:
+            # username does not exist
+            return "username does not exist"
+        elif userInfo["password"] != password:
+            return "incorrect password"
+        else:
+            # login success
+            return volunteerPage(username)
     return render_template("login.html")
 
 @app.route('/register')

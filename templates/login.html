@@ -9,9 +9,11 @@
 <body>
     <h1>Login Page</h1>
 
-    <form action="{{ url_for('getUsername')}}" method="post">
+    <form action="{{ url_for('loginAction')}}" method="post">
     <label for="username">Username:</label>
     <input type="text" id="firstname" name="username" placeholder="username">
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password" placeholder="password">
     <button type="submit">Login</button>
 </body>
 
