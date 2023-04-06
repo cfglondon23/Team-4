@@ -4,7 +4,7 @@
 # venv\Scripts\activate
 # flask --app main run
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from markupsafe import escape
 import database
 
@@ -18,6 +18,13 @@ def homePage():
 @app.route('/login')
 def volunteerLogin():
     return render_template('login.html')
+
+@app.route('/', methods =["GET", "POST"])
+def getUsername():
+    if request.method == "POST":
+       username = request.form.get("username")
+       return volunteerPage(username)
+    return render_template("login.html")
 
 @app.route('/register')
 def volunteerRegister():
@@ -56,3 +63,6 @@ def vacancyListing(school):
 @app.route('/school/<school>/applications')
 def applicationListing(school):
     return f'Application listing: {escape(school)}'
+ 
+if __name__=='__main__':
+   app.run()
