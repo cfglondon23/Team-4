@@ -43,17 +43,51 @@ h1, h2, h3 {
 	color: #000000; /* Set the color of the hours worked text */
 }
 
-		<img src="templatePictures/Reema.png" alt="REEMA" width="500" height="333">
-		
-    	<p style="background-color:powderblue;">
-        This is a paragraph.
-        </p>
-        
-        <p style="background-color:powderblue;">
-        This is a paragraph.
-        </p>
+.volunteering-history li {
+	color: #666666; /* Set the color of the volunteering history text */
+	font-size: 16px;
+	margin-bottom: 10px;
+}
 
-		<a href={{data}}>Vacancy Search</a>
-
-	</body>
+	</style>
+	<title>Profile Dashboard</title>
+	<!-- Include any necessary CSS and JS files here -->
+	<style>
+		/* Add any custom styles here */
+		.rating {
+			font-size: 24px;
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>Profile Dashboard</h1>
+	<div class="profile-details">
+		<img src="https://media.licdn.com/dms/image/C4D03AQF31fJpTTvZPg/profile-displayphoto-shrink_800_800/0/1600877824454?e=1686182400&v=beta&t=M1sjzWLSDpZbRud4OHhuEDsH8dp3navg2SjMwxuJtFk" alt="Profile Picture">
+		<h2>Reema Pandya</h2>
+		<p>Age: 28</p>
+		<p>Years of experience: 5 </p>
+		<p>Educational Background: HR Degree</p>
+		<p>Location: London</p>
+		<button id="Edit Details">Edit Details</button><p></p>
+		  
+	
+	<div class="ratings">
+		<h3>Teacher Ratings:</h3>
+		<div class="rating">★★★★★</div>
+	</div>
+	<div class="hours-worked">
+		<h3>Total Hours Worked:</h3>
+		<p>8 hours</p>
+	</div>
+	<div class="volunteering-history">
+		<h3>Volunteering History:</h3>
+		<ul>
+			<li>Organized a coding workshop for J.P.Morgan in 2023</li>
+			<li>Participated in a charity run to raise funds for cancer research in 2022</li>
+			<li>Saved a dying dog in the park last week</li>
+		</ul>
+	</div>
+	<a href={{data}}>Vacancy Search</a>
+</body>
 </html>
