@@ -7,11 +7,15 @@ DB_URL = 'https://volunteerapp-1dc3a-default-rtdb.firebaseio.com/'
 cred_obj = firebase_admin.credentials.Certificate(KEY_PATH)
 default_app = firebase_admin.initialize_app(cred_obj, {'databaseURL': DB_URL})
 
-def writeToDb():
-    with open("test.json", "r") as f:
-        file_contents = json.load(f)
+
+
+# takes parameters, stores it to the database
+def createUserProfile(username, password, age):
+    file_contents = {"user": {"username": username, "password": password, "age": age}}
     ref = db.reference("/")
-    ref.set(file_contents)
+    ref.push(file_contents)
+    ref.set({"users": })
 
 if __name__ == "__main__":
-    writeToDb()
+    createUserProfile("bob smith", "", 30)
+    createUserProfile("lily carter", "", 22)
