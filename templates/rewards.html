@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rewards System</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #F5F5F5;
+			font-family: Arial, sans-serif;
+			color: #000000;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #2A93D5;
+			color: #FFFFFF;
+			padding: 20px;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 36px;
+			font-weight: normal;
+		}
+
+		main {
+			margin: 20px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		section {
+			flex: 1;
+			margin: 10px;
+			padding: 20px;
+			background-color: #FFFFFF;
+			box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+			border-radius: 10px;
+		}
+
+		h2 {
+			margin-top: 0;
+			font-size: 24px;
+			font-weight: normal;
+			color: #000000
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			margin-bottom: 10px;
+			background-color: #2A93D5;
+			padding: 20px;
+			border-radius: 10px;
+			color: #FFFFFF;
+		}
+
+		.partner-img {
+			display: block;
+			margin: 0 auto;
+			width: 200px;
+			height: 100px;
+			object-fit: contain;
+		}
+
+		@media (min-width: 768px) {
+			main {
+				flex-direction: row;
+			}
+
+			section {
+				flex: 1 1 calc(50% - 20px);
+			}
+
+			.internships {
+				order: 1;
+			}
+
+			.partners {
+				order: 2;
+			}
+		}
+
+  
+  .partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-logos img {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    object-fit: contain;
+  }
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Work Experience Opportunities</h1>
+	</header>
+
+	<main>
+		<section class="internships">
+			<h2>Work Experience Opportunities</h2>
+			<ul>
+				<li>
+					<h3>Software Engineering Intern</h3>
+					<p>Location: Oxford, UK</p>
+					<p>Description: We are seeking a motivated and talented software engineering intern to join our team for the summer of 2023.</p>
+					<a href="#">Learn More</a>
+				</li>
+				<li>
+					<h3>Marketing Intern</h3>
+					<p>Location: London, UK</p>
+					<p>Description: We are looking for an enthusiastic and creative marketing intern to help us with our brand strategy and social media campaigns.</p>
+					<a href="#">Learn More</a>
+				</li>
+				<li>
+					<h3>Product Design Intern</h3>
+					<p>Location: London, UK</p>
+					<p>Description: Our product design team is seeking a talented and innovative intern to work on new features and enhancements for our flagship product.</p>
+					<a href="#">Learn More</a>
+				</li>
+
+		</section>
+
+<section class="partners">
+  <h2>Partnering Companies</h2>
+  <div class="partner-logos">
+    <img src="https://media2.vault.com/14343503/210909_jp-morgan_logo.jpg" alt="JP Morgan logo">
+    <img src="https://thumbs.dreamstime.com/b/simple-vector-filled-flat-amazon-icon-logo-solid-black-pictogram-isolated-white-background-amazon-logo-159029074.jpg" alt="Amazon logo">
+    <img src="https://i2.wp.com/www.arep.co.za/wp-content/uploads/2017/04/bloomberg-logo.jpg?ssl=1" alt="Bloomberg logo">
+    <img src="https://margaretwebster.co.uk/wp-content/uploads/2021/06/astrazeneca-logo-png-astrazeneca-logo-astra-zeneca-4902.png" alt="AstraZeneca logo">
+  </div>
+</section>
+
+
+

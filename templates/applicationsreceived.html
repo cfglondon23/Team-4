@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Applications</title>
+	<style>
+        /* Apply the background color to the entire page */
+        body {
+            background-color: #145888;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the main content area */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the list of applications */
+        #applications {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .application {
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 48%;
+        }
+
+        .application .profile-photo {
+            width: 100%;
+            height: 300px
+            background-color: #dddddd;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+        }
+
+        .application .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .application .details {
+            padding: 20px;
+        }
+
+        .application .details h2 {
+            margin-top: 0;
+        }
+
+        .application .details p {
+            margin-bottom: 0;
+        }
+
+        .application .actions {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .application .actions button {
+            background-color: #145888;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            border-radius: 20px;
+            padding: 10px;
+            border: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+	<header>
+		<h1>List of Applications</h1>
+	</header>
+	<main>
+		<section id="applications">
+			<div class="application">
+				<div class="profile-photo">
+					<img src="https://media.licdn.com/dms/image/C4D03AQF31fJpTTvZPg/profile-displayphoto-shrink_800_800/0/1600877824454?e=1686182400&v=beta&t=M1sjzWLSDpZbRud4OHhuEDsH8dp3navg2SjMwxuJtFk" alt="Profile Photo">
+				</div>
+				<div class="details">
+					<h2>Reema Pandya</h2>
+					<p>Years of Experience: 5 years</p>
+          <p>Educational Background: HR Degree</p>
+          <p>Location: London </p>
+          <p>“I don’t like onions” </p>
+				</div>
+				<div class="actions">
+					<button>Contact Volunteer</button>
+				</div>
+			</div>
+			<div class="application">
+				<div class="profile-photo">
+					<img src="https://media.licdn.com/dms/image/C4D03AQFvg6D5s1Y45Q/profile-displayphoto-shrink_800_800/0/1589887696276?e=2147483647&v=beta&t=U4xWwVCRnEYReYgISw1fEmpFyZ-xEE-4LbE8uzj42I4" alt="Profile Photo">
+				</div>
+				<div class="details">
+					<h2>Jamie Dimon</h2>
+					<p>Years of Experience: 18 years</p>
+          <p>Educational Background: MBA at Harvard</p>
+          <p>Location: London </p>
+          <p>“CEO of JP Morgan Chase & Co” </p>
+				</div>
+				<div class="actions">
+					<button>Contact Volunteer</button>
+				</div>
+			</div>
+
+		</section>
+	</main>
+</body>
+</html>
