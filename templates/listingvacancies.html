@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Vacancies</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+body {
+  background-color: #F2F2F2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2A93D5;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+h2 {
+  margin: 0 0 10px;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #2A93D5;
+}
+
+input[type="text"], input[type="date"], input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #2A93D5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #2A93D5;
+  text-decoration: none;
+  border-bottom: 1px dotted #2A93D5;
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+    
+  </style>
+</head>
+<body>
+	<header>
+		<h1>New Vacancies</h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>List New Vacancies</h2>
+			<form>
+				<label for="subject">Subject</label>
+				<input type="text" id="name" name="subject" required>
+
+				<label for="email">Year Group</label>
+				<input type="text" id="year group" name="year group" required>
+
+				<label for="job-title">Date</label>
+				<input type="date" id="date" name="date" required>
+
+				<label for="location">Preferred Previous Experience</label>
+				<input type="text" id="experience" name="location" required>
+
+				<label for="CV">Upload CV</label>
+				<input type="file" id="cv" name="cv" required>
+
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+
+		<section>
+			<h2>Current Job Listings</h2>
+			<ul>
+				<li>
+					<h3>Substitute Teacher</h3>
+					<p>Subject: Maths</p>
+					<p>Year: 3</p>
+          <p>Date: 07/04/2023 10:00-11:00</p>
+          <p>Preferred Previous Experience: A Level Maths </p>
+					<a href="#">View Applications</a>
+				</li>
+				<li>
+					<h3>Substitute Teacher</h3>
+					<p>Subject: English</p>
+					<p>Year: 4</p>
+          <p>Date: 13/04/2023 14:30-15:30</p>
+          <p>Preferred Previous Experience: English Degree</p>
+					<a href="#">View Applications</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+</body>
+</html>
