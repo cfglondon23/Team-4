@@ -7,13 +7,13 @@ height: 83px;
 left: 1028px;
 top: 36px;
 
-background: #D9D9D9;
+background: #230e0e;
 border-radius: 50px;
 }
 
 /* Login */
 
-login {
+h1 {
 position: absolute;
 width: 63px;
 height: 29px;
@@ -25,17 +25,13 @@ font-style: normal;
 font-weight: 400;
 font-size: 24px;
 line-height: 29px;
-}
 
-/* identical to box height */
-
-box_height {
 color: #000000;
 }
 
 /* image 3 */
 
-image_three {
+p {
 position: absolute;
 width: 1280px;
 height: 533px;
@@ -71,9 +67,6 @@ background: #D9D9D9;
 border-radius: 50px;
 }
 
-
-
-
 /* Rectangle 65 */
 
 rectangle_sixtyfive {
@@ -86,7 +79,6 @@ top: 481px;
 background: #37AEAC;
 border-radius: 50px;
 }
-
 
 /* School */
 
@@ -103,7 +95,6 @@ font-weight: 400;
 font-size: 24px;
 line-height: 29px;
 }
-
 
 /* Sign up as: */
 
