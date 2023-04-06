@@ -1,6 +1,5 @@
 import firebase_admin
 from firebase_admin import db
-import json
 
 KEY_PATH = 'privateKey/volunteerapp-1dc3a-firebase-adminsdk-2ntz8-d21784bfbf.json'
 DB_URL = 'https://volunteerapp-1dc3a-default-rtdb.firebaseio.com/'
