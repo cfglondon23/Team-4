@@ -4,7 +4,7 @@
 # venv\Scripts\activate
 # flask --app main run
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from markupsafe import escape
 import database as db
 import pdb
@@ -33,7 +33,7 @@ def loginAction():
             return "incorrect password"
         else:
             # login success
-            return volunteerPage(username)
+            return redirect('user/'+username)
     return render_template("login.html")
 
 @app.route('/register')
@@ -51,7 +51,7 @@ def registerAction():
             return "username already exists"
         else:
             db.storeUserProfile(username, password, age)
-            return volunteerPage(username)
+            return redirect('user/'+username)
     return render_template("register.html")
 
 @app.route('/user/<username>')
