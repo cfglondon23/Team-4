@@ -15,7 +15,7 @@
 
  /* Header styles */
 header {
-  background-color: #333;
+  background-color: #2A93D5;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -23,11 +23,25 @@ header {
   align-items: center;
 }
 
+.logo img {
+  max-height: 50px;
+}
+
 header h1 {
   margin: 0 auto;
   font-size: 36px;
   text-align: center;
+  top: 100px;
 }
+
+.mainbody{
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+
+}
+
 
 header a {
   color: #fff;
@@ -49,13 +63,7 @@ header a:hover {
 }
 
 /* Main content styles */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+
 
 main h1 {
   font-size: 32px;
@@ -78,27 +86,9 @@ main a:hover {
   text-decoration: underline;
 }
 
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
 
-footer p {
-  margin: 0;
-  font-size: 16px;
-}
 
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
 
-footer a:hover {
-  text-decoration: underline;
-}
 
 /* Center the buttons */
 nav {
@@ -108,27 +98,30 @@ nav {
 </style>
 </head>
 
+
+
 <body>
   <header>
-    <h1>Home</h1>
+		<div class="logo">
+		  <img src="{{url_for('static', filename='Equiteach.jpg')}}" alt="logo">
+		</div>
     <nav>
       <a href="/login">Login</a>
       <a href="/register">Volunteer Register</a>
       <a href="/schoolRegister">School Register</a>
       <a href="/aboutus">About Us</a>
     </nav>
-  </header>
+  </header><br>
   <main>
-    <h1>EquiTeach</h1>
+
+    <body background="{{url_for('static', filename='home.jpg')}}"></body>
+		<div class="mainbody"; style="padding-top: 200px">
+    <h7>
+      "Education is the most powerful weapon which you can choose to change the world" - Nelson Mandela
+    </h7>
+  </div>
   </main>
-  <footer>
-    <p>&copy; 2023 EquiTeach</p>
-    <nav>
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Use</a>
-      <a href="/contact">Contact Us</a>
-    </nav>
-  </footer>
+
 </body>
 
 </html>
