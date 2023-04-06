@@ -56,7 +56,7 @@ def registerAction():
 
 @app.route('/user/<username>')
 def volunteerPage(username):
-    return f'Volunteer page: {escape(username)}'
+    return  render_template("profiledash.html")
 
 @app.route('/user/<username>/profile')
 def volunteerProfile(username):
@@ -89,4 +89,4 @@ def applicationListing(school):
     return f'Application listing: {escape(school)}'
  
 if __name__=='__main__':
-   app.run()
+   app.run(debug=True)
