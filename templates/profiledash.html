@@ -2,6 +2,54 @@
 <html>
 <head>
 	<style>
+
+header {
+  background-color: #2A93D5;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #2A93D5;
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
 body {
 	background-color: #F7F7F7; /* Set the background color of the page */
 }
@@ -10,7 +58,23 @@ h1, h2, h3 {
 	color: #2A93D5; /* Set the color of the headings */
 }
 
+button {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #2A93D5;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;}
 
+
+.header{
+	width: 100%;
+	height: 80px;
+	display: block;
+
+}
 .profile-details {
 	background-color: #FFFFFF; /* Set the background color of the profile details section */
 	padding: 20px;
@@ -32,6 +96,9 @@ h1, h2, h3 {
 	border-radius: 10px;
 	box-shadow: 0px 2px 10px #C7C7C7; /* Add a shadow to the other sections */
 	margin-bottom: 20px;
+
+
+
 }
 
 .rating {
@@ -61,8 +128,23 @@ h1, h2, h3 {
 	</style>
 </head>
 <body>
-	<h1>Profile Dashboard</h1>
+	<header>
+		<div class="logo">
+		  <img src="your-logo.png" alt="Your Logo">
+		</div>
+		<nav>
+		  <ul>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">Sign Up</a></li>
+		  </ul>
+		</nav>
+	  </header>
+	  
+
+	
 	<div class="profile-details">
+		<h1>Profile Dashboard</h1>
 		<img src="https://media.licdn.com/dms/image/C4D03AQF31fJpTTvZPg/profile-displayphoto-shrink_800_800/0/1600877824454?e=1686182400&v=beta&t=M1sjzWLSDpZbRud4OHhuEDsH8dp3navg2SjMwxuJtFk" alt="Profile Picture">
 		<h2>Reema Pandya</h2>
 		<p>Age: 28</p>
