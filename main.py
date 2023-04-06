@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homePage():
-    return "home page"
+    return render_template('homepage.html')
 
 # Volunteer
 @app.route('/login')
@@ -56,11 +56,11 @@ def registerAction():
 
 @app.route('/user/<username>')
 def volunteerPage(username):
-    return render_template("profiledash.html", data=f"/user/{username}/vacancySearch")
+    return render_template("profiledash.html", data=[f"/user/{username}/vacancySearch", f"/user/{username}/rewards"])
 
 @app.route('/user/<username>/rewards')
 def volunteerRewards(username):
-    return f'Volunteer rewards: {escape(username)}'
+    return render_template("rewards.html")
 
 @app.route('/user/<username>/vacancySearch')
 def volunteerVacancySearch(username):
