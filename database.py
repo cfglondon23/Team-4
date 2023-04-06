@@ -22,6 +22,10 @@ def userExists(username):
     ref = db.reference("/")
     return ref.child("users").child(username).get() != None
 
+def getLocations():
+    ref = db.reference("/")
+    return ref.child("locations").get()
+
 if __name__ == "__main__":
     k1 = storeUserProfile("bobsmith", "", 30)
     k2 = storeUserProfile("lilycarter", "", 22)

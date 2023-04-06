@@ -8,15 +8,9 @@
 
 <body>
     <h1>Search for vacancy</h1>
-    <iframe
-        width="450"
-        height="250"
-        frameborder="0" style="border:0"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS"
-        allowfullscreen>
-    </iframe>
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9932.862655761284!2d-0.15586050981073063!3d51.509259279211406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605255643cb2b%3A0x261185c6bcdb02d2!2sMayfair%2C%20London!5e0!3m2!1sen!2suk!4v1680793873460!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <h2> Locations </h2>
     <select name="locations" id="locations">
     {% for loc in data %}
     <option value=loc>{{loc}}</option>
