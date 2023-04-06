@@ -1,0 +1,86 @@
+/* Apply the background color to the entire page */
+body {
+	background-color: #145888;
+}
+
+/* Style the header */
+header {
+	background-color: #ffffff;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Style the main content area */
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the list of applications */
+#applications {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.application {
+	background-color: #f7f7f7;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	width: 48%;
+}
+
+.application .profile-photo {
+	width: 100%;
+	height: 300px
+	background-color: #dddddd;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+}
+
+.application .profile-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.application .details {
+	padding: 20px;
+}
+
+.application .details h2 {
+	margin-top: 0;
+}
+
+.application .details p {
+	margin-bottom: 0;
+}
+
+.application .actions {
+	padding: 20px;
+	text-align: center;
+}
+
+.application .actions button {
+	background-color: #145888;
+	border: none;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+input[type="text"] {
+	border-radius: 20px;
+	padding: 10px;
+	border: none;
+	margin-bottom: 20px;
+}
