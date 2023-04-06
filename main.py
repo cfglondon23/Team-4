@@ -2,21 +2,26 @@
 
 # To run, execute following commands:
 # venv\Scripts\activate
-# flask --app hello run
+# flask --app main run
 
-from flask import Flask
+from flask import Flask, render_template
 from markupsafe import escape
+import database
 
 app = Flask(__name__)
 
 @app.route('/')
 def homePage():
-    return 'Home page'
+    return "home page"
 
 # Volunteer
-@app.route('/volunteerLogin')
+@app.route('/login')
 def volunteerLogin():
-    return 'Volunteer login'
+    return render_template('login.html')
+
+@app.route('/register')
+def volunteerRegister():
+    return render_template('register.html')
 
 @app.route('/user/<username>')
 def volunteerPage(username):
@@ -36,9 +41,13 @@ def volunteerVacancySearch(username):
 
 # School
 
-@app.route('/schoolLogin')
+@app.route('/login')
 def schoolLogin():
-    return 'School login'
+    return render_template('login.html')
+
+@app.route('/register')
+def schoolRegister():
+    return render_template('register.html')
 
 @app.route('/school/<school>')
 def vacancyListing(school):
