@@ -7,7 +7,6 @@
 from flask import Flask, render_template, request, redirect
 from markupsafe import escape
 import database as db
-import pdb
 
 app = Flask(__name__)
 
@@ -42,21 +41,27 @@ def loginAction():
 
 @app.route('/register')
 def volunteerRegister():
-    return render_template('register.html')
+    return render_template('signupvolunteers.html')
 
 @app.route('/registerAction', methods =["GET", "POST"])
 def registerAction():
     if request.method == "POST":
-        username = request.form.get("username")
+        username = request.form.get("name")
+        email = request.form.get("email")
         password = request.form.get("password")
+        confirmPassword = request.form.get("confirm-password")
         age = request.form.get("age")
+        address = request.form.get("address")
+        experience = request.form.get("address")
         # check if username exists in db already
         if db.userExists(username):
             return "username already exists"
+        elif password != confirmPassword:
+            return "password does not match confirm password"
         else:
-            db.storeUserProfile(username, password, age)
+            db.storeUserProfile(username, email, password, age, address, experience)
             return redirect('user/'+username)
-    return render_template("register.html")
+    return render_template("signupvolunteers.html")
 
 @app.route('/user/<username>')
 def volunteerPage(username):
@@ -83,9 +88,9 @@ def volunteerVacancySearch(username):
 def schoolLogin():
     return render_template('login.html')
 
-@app.route('/register')
+@app.route('/schoolRegister')
 def schoolRegister():
-    return render_template('register.html')
+    return render_template('signupschools.html')
 
 @app.route('/school/<school>')
 def vacancyListing(school):

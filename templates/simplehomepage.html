@@ -2,17 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Home page</title>
+  <meta charset="UTF-8">
+  <title>Home page</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+ /* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 auto;
+  font-size: 36px;
+  text-align: center;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  background-color: #0077cc;
+  margin-right: 10px;
+}
+
+header a:last-child {
+  margin-right: 0;
+}
+
+header a:hover {
+  background-color: #005fa3;
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+  font-size: 32px;
+  margin-top: 0;
+  text-align: center;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+main a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Center the buttons */
+nav {
+  display: flex;
+  justify-content: center;
+}
+</style>
 </head>
 
 <body>
+  <header>
     <h1>Home</h1>
-    <a href="/login">Login</a>
-    <br>
-    <a href="/register">Register</a>
-    <br>
-    <a href="/aboutus">About Us</a>
+    <nav>
+      <a href="/login">Login</a>
+      <a href="/register">Volunteer Register</a>
+      <a href="/schoolRegister">School Register</a>
+      <a href="/aboutus">About Us</a>
+    </nav>
+  </header>
+  <main>
+    <h1>EquiTeach</h1>
+  </main>
+  <footer>
+    <p>&copy; 2023 EquiTeach</p>
+    <nav>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Use</a>
+      <a href="/contact">Contact Us</a>
+    </nav>
+  </footer>
 </body>
 
 </html>
