@@ -69,7 +69,12 @@ def volunteerRewards(username):
 @app.route('/user/<username>/vacancySearch')
 def volunteerVacancySearch(username):
     locations = db.getLocations()
-    data = list(locations.keys())
+    vacantLocations = []
+    for key in locations:
+        if locations[key]["isVacant"]:
+            vacantLocations.append(key)
+
+    data = [list(locations.keys()), vacantLocations]
     return render_template("volunteerVacancySearch.html", data=data)
 
 # School
