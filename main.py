@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homePage():
-    return render_template('homepage.html')
+    return render_template('simplehomepage.html')
 
 # Volunteer
 @app.route('/login')
