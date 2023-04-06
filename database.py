@@ -11,11 +11,10 @@ default_app = firebase_admin.initialize_app(cred_obj, {'databaseURL': DB_URL})
 
 # takes parameters, stores it to the database
 def createUserProfile(username, password, age):
-    file_contents = {"user": {"username": username, "password": password, "age": age}}
+    file_contents = {"username": username, "password": password, "age": age}
     ref = db.reference("/")
-    ref.push(file_contents)
-    ref.set({"users": })
+    ref.child("users").push(file_contents)
 
 if __name__ == "__main__":
-    createUserProfile("bob smith", "", 30)
-    createUserProfile("lily carter", "", 22)
+    createUserProfile("bobsmith", "", 30)
+    createUserProfile("lilycarter", "", 22)
